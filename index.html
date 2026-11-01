@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedashree Beauty Parlour - Beauty, Hair & Bridal Care</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            wine: '#781F37',    // Burgundy/Wine from Logo
+                            wineDark: '#561426',
+                            gold: '#D4AF37',    // Gold Ring Accent
+                            goldLight: '#FDF8EC',
+                            cream: '#FFF9F5',
+                            softPink: '#FCEFEF',
+                            dark: '#221B1D'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-brand-cream text-brand-dark antialiased selection:bg-brand-softPink">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-brand-wine text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-4">
+                <a href="tel:6383964998" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-xs"></i> 6383964998
+                </a>
+                <span class="text-white/40">|</span>
+                <a href="mailto:vedashreebeautyparlour@gmail.com" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-xs"></i> vedashreebeautyparlour@gmail.com
+                </a>
+            </div>
+            <a href="https://wa.me/916383964998?text=Hello%20Vedashree%20Beauty%20Parlour,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="hover:text-green-300 transition-colors flex items-center gap-1.5 text-xs font-semibold">
+                <i class="fa-brands fa-whatsapp text-sm text-green-400"></i> WhatsApp Booking
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <img src="1000607734.png" alt="Vedashree Beauty Parlour Logo" class="h-14 sm:h-16 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x60/781F37/FFF?text=Vedashree';">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                    <a href="#home" class="hover:text-brand-wine transition-colors">Home</a>
+                    <a href="#services" class="hover:text-brand-wine transition-colors">Services</a>
+                    <a href="#about" class="hover:text-brand-wine transition-colors">About</a>
+                    <a href="#contact" class="hover:text-brand-wine transition-colors">Contact</a>
+                </div>
+
+                <!-- Call Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:6383964998" class="bg-brand-wine hover:bg-brand-wineDark text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-xs"></i> Call 6383964998
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-brand-dark focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-rose-100 px-4 pt-3 pb-6 space-y-3 text-center">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 font-medium hover:text-brand-wine">Home</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 font-medium hover:text-brand-wine">Services</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 font-medium hover:text-brand-wine">About Us</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 font-medium hover:text-brand-wine">Contact Us</a>
+            <a href="tel:6383964998" class="block w-full bg-brand-wine text-white py-3 rounded-xl font-medium mt-2">
+                <i class="fa-solid fa-phone mr-2"></i>Call Now: 6383964998
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative bg-gradient-to-b from-brand-softPink via-white to-brand-cream py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- Prominent Logo Container -->
+            <div class="inline-block mb-6 p-3 bg-white rounded-full shadow-lg border border-brand-gold/30">
+                <img src="1000607734.png" alt="Vedashree Beauty Parlour" class="h-28 sm:h-36 w-auto mx-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/240x240/781F37/FFF?text=Vedashree+Beauty';">
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-brand-wine tracking-tight mb-4">
+                Enhance Your Natural Beauty & Radiance
+            </h1>
+            <p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8">
+                Welcome to <strong class="text-brand-wine">Vedashree Beauty Parlour</strong>. Experience personalized care, skin treatments, haircutting & styling, precision threading, and breathtaking bridal makeovers.
+            </p>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                <a href="tel:6383964998" class="bg-brand-wine hover:bg-brand-wineDark text-white px-7 py-3.5 rounded-full font-semibold shadow-md transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call 6383964998
+                </a>
+                <a href="https://wa.me/916383964998?text=Hello%20Vedashree%20Beauty%20Parlour,%20I'd%20like%20to%20book%20an%20appointment." target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-7 py-3.5 rounded-full font-semibold shadow-md transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Booking
+                </a>
+                <a href="mailto:vedashreebeautyparlour@gmail.com" class="bg-white hover:bg-rose-50 text-brand-wine border border-brand-wine/30 px-6 py-3.5 rounded-full font-semibold transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-brand-wine font-semibold uppercase tracking-widest text-xs">Our Specialty</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Services & Treatments</h2>
+            <div class="w-12 h-0.5 bg-brand-gold mx-auto mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 1. Facial Treatment -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Facial Treatment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Facial Treatment</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Deep cleansing, herbal hydra-facials, and skin brightening routines designed to restore natural glow.</p>
+                </div>
+            </div>
+
+            <!-- 2. Hair Care & Styling -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Hair Care and Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Hair Care & Styling</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Haircuts, nourishing hair spas, conditioning, smoothing, and beautiful event hair styling.</p>
+                </div>
+            </div>
+
+            <!-- 3. Manicure & Pedicure -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Manicure and Pedicure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Manicure & Pedicure</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Relaxing hand and foot care spas, nail shaping, polishing, and hygienic pampering.</p>
+                </div>
+            </div>
+
+            <!-- 4. Threading & Eyebrow Shaping -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Threading and Eyebrows" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Threading & Eyebrow Shaping</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Precise eyebrow shaping, upper lip, chin, and gentle full-face facial threading.</p>
+                </div>
+            </div>
+
+            <!-- 5. Makeup Services -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Makeup Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Makeup Services</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Party makeup, celebratory glam, HD makeup, and occasion-ready glowing looks.</p>
+                </div>
+            </div>
+
+            <!-- 6. Bridal Packages -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Bridal Packages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Bridal Packages</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Complete pre-bridal skin prep, saree draping, wedding makeup, and hair accessories styling.</p>
+                </div>
+            </div>
+
+            <!-- 7. Skin Care & Waxing -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-rose-100 transition-all group sm:col-span-2 lg:col-span-1">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512290900673-7002dfb988f5?auto=format&fit=crop&w=600&q=80" alt="Skin Care and Waxing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-brand-wine">Skin Care & Waxing</h3>
+                    <p class="text-gray-600 text-sm mt-2 leading-relaxed">Herbal and soft waxing, de-tan therapies, and skin hydration sessions for smooth skin.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-brand-softPink/60 py-16">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="text-brand-wine font-semibold uppercase tracking-widest text-xs">Why Choose Us</span>
+            <h2 class="font-serif text-3xl font-bold text-brand-dark mt-2 mb-4">Dedicated to Your Pampering</h2>
+            <p class="text-gray-700 leading-relaxed max-w-3xl mx-auto text-sm sm:text-base">
+                At <strong>Vedashree Beauty Parlour</strong>, we prioritize cleanliness, quality skincare products, and personalized attention. Whether it's a quick threading session or a complete bridal makeover, we ensure you leave feeling confident and revitalized.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-brand-wine font-semibold uppercase tracking-widest text-xs">Contact Us</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Get in Touch with Us</h2>
+            <p class="text-gray-600 text-sm mt-3">We look forward to welcoming you! Connect with us directly via phone, email, or WhatsApp for bookings and inquiries.</p>
+            <div class="w-12 h-0.5 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Phone Card -->
+            <div class="bg-white p-8 rounded-2xl border border-rose-100 shadow-sm text-center hover:shadow-md transition-shadow flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-brand-softPink flex items-center justify-center text-brand-wine text-2xl mb-4">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Call Us</h3>
+                <p class="text-xs text-gray-500 mb-4">Available for direct calls & reservations</p>
+                <a href="tel:6383964998" class="mt-auto bg-brand-wine hover:bg-brand-wineDark text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-xs"></i> 6383964998
+                </a>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="bg-white p-8 rounded-2xl border border-rose-100 shadow-sm text-center hover:shadow-md transition-shadow flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center text-green-600 text-2xl mb-4">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">WhatsApp Us</h3>
+                <p class="text-xs text-gray-500 mb-4">Fastest response for instant booking</p>
+                <a href="https://wa.me/916383964998?text=Hello%20Vedashree%20Beauty%20Parlour,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="mt-auto bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-full font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="bg-white p-8 rounded-2xl border border-rose-100 shadow-sm text-center hover:shadow-md transition-shadow flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full bg-brand-softPink flex items-center justify-center text-brand-wine text-2xl mb-4">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Email Us</h3>
+                <p class="text-xs text-gray-500 mb-4">Send package inquiries & feedback</p>
+                <a href="mailto:vedashreebeautyparlour@gmail.com" class="mt-auto bg-white hover:bg-rose-50 text-brand-wine border border-brand-wine/30 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 break-all">
+                    <i class="fa-solid fa-envelope text-xs"></i> vedashreebeautyparlour@gmail.com
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-10 border-t border-brand-wine/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="1000607734.png" alt="Vedashree Logo" class="h-12 w-auto bg-white/10 p-1 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/781F37/FFF?text=V';">
+                <div>
+                    <h4 class="font-serif text-xl font-bold text-white leading-tight">Vedashree Beauty Parlour</h4>
+                    <p class="text-xs text-gray-400">Ph: 6383964998 | vedashreebeautyparlour@gmail.com</p>
+                </div>
+            </div>
+            <div class="text-xs text-gray-400">
+                &copy; <span id="year"></span> Vedashree Beauty Parlour. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Floating Call & WhatsApp Buttons -->
+    <div class="fixed bottom-4 right-4 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/916383964998?text=Hello%20Vedashree%20Beauty%20Parlour," target="_blank" class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:6383964998" class="w-12 h-12 bg-brand-wine text-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform" title="Call Us">
+            <i class="fa-solid fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
